@@ -1,0 +1,9 @@
+flask
+flask-cors
+vaderSentiment
+textblob
+selenium
+beautifulsoup4
+pandas
+numpy
+requests
