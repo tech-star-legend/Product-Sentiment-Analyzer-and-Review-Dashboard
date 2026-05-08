@@ -1,0 +1,1 @@
+MONGO_URI = "mongodb+srv://technicalsugumar:9790944440@sentimentproject.s2hg2tq.mongodb.net/sentiment_db?retryWrites=true&w=majority"
