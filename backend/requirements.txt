@@ -6,9 +6,6 @@ vaderSentiment==3.3.2
 textblob==0.18.0
 selenium==4.21.0
 beautifulsoup4==4.12.3
-pandas==2.2.2
-numpy==1.26.4
-lxml==5.2.2
 requests==2.32.3
 webdriver-manager==4.0.1
 gunicorn==22.0.0
