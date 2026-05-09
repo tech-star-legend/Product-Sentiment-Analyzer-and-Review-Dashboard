@@ -1,51 +1,54 @@
 .page {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 24px 64px;
-  animation: fadeIn 0.4s ease;
+  padding: 40px 28px 80px;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.35s ease;
 }
 
 .header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 32px;
-  color: var(--text-secondary);
+  margin-bottom: 28px;
+  color: var(--text-muted);
 }
 
 .header h1 {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .count {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   padding: 3px 10px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 20px;
   color: var(--text-muted);
+  font-weight: 600;
+  font-family: var(--font-mono);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
 }
 
 .card {
-  padding: 20px;
+  padding: 18px 20px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.15s ease;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
   position: relative;
   overflow: hidden;
 }
@@ -62,8 +65,9 @@
 
 .card:hover {
   border-color: var(--border-bright);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  background: var(--bg-hover);
 }
 
 .card:hover::before { opacity: 1; }
@@ -75,31 +79,30 @@
 }
 
 .sourceTag {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   text-transform: capitalize;
   padding: 2px 8px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 4px;
   color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
-.extIcon {
-  color: var(--text-muted);
-  transition: color 0.2s;
-}
+.extIcon { color: var(--text-muted); transition: color 0.15s; }
 .card:hover .extIcon { color: var(--accent-bright); }
 
 .name {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 0.9rem;
   color: var(--text-primary);
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .query {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   font-style: italic;
 }
@@ -108,15 +111,18 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 2px;
+  flex-wrap: wrap;
 }
 
 .stat {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
+  font-weight: 600;
+  font-family: var(--font-mono);
 }
 
 .statPos { color: var(--positive); }
@@ -124,37 +130,47 @@
 
 .miniBar {
   display: flex;
-  height: 4px;
+  height: 3px;
   border-radius: 2px;
   overflow: hidden;
   background: var(--bg-elevated);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .dateStr {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   margin-top: auto;
+  padding-top: 4px;
+  font-family: var(--font-mono);
 }
 
 .empty {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   padding: 80px 20px;
   color: var(--text-muted);
   text-align: center;
 }
 
+.empty p { font-size: 0.9rem; }
+
 .goBtn {
-  padding: 10px 24px;
+  padding: 10px 22px;
   background: var(--accent);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius);
   color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.2s;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--font-main);
+  transition: all 0.15s;
 }
-.goBtn:hover { background: var(--accent-bright); }
+
+.goBtn:hover {
+  background: var(--accent-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(59,130,246,0.3);
+}

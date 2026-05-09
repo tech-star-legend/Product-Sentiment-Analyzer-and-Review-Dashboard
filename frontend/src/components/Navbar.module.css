@@ -2,16 +2,16 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
+  background: rgba(8,11,18,0.85);
+  backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--border);
 }
 
 .inner {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
-  height: 64px;
+  padding: 0 28px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,68 +22,69 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
 }
 
 .logoIcon {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   background: var(--accent);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 0 16px var(--accent-glow);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .logoText {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 1.05rem;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+}
+
+.logoText span {
+  color: var(--accent-bright);
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .link {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 14px;
+  padding: 6px 14px;
   border-radius: 8px;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: var(--text-secondary);
-  transition: all 0.2s ease;
-  text-decoration: none;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
 }
 
-.link:hover {
-  color: var(--text-primary);
-  background: var(--bg-elevated);
-}
+.link:hover { color: var(--text-primary); background: var(--bg-elevated); }
 
 .link.active {
   color: var(--accent-bright);
-  background: var(--accent-glow);
+  background: var(--accent-dim);
 }
 
 .badge {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 12px;
+  padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid var(--border-bright);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .dot {
@@ -91,12 +92,7 @@
   height: 6px;
   border-radius: 50%;
   background: var(--positive);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
+  animation: pulse-dot 2s infinite;
 }
 
 @media (max-width: 600px) {

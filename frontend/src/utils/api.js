@@ -8,7 +8,7 @@ const api = axios.create({
   headers: { 'Content-Type': 'application/json' }
 })
 
-export const searchProduct = (query, source = 'amazon', maxReviews = 20) =>
+export const searchProduct = (query, source = 'amazon', maxReviews = 5) =>
   api.post('/api/search', { query, source, max_reviews: maxReviews })
 
 export const getProduct = (productId) =>

@@ -10,25 +10,27 @@ export default function Navbar() {
       <div className={styles.inner}>
         <Link to="/" className={styles.logo}>
           <div className={styles.logoIcon}>
-            <Activity size={18} strokeWidth={2.5} />
+            <Activity size={16} strokeWidth={2.5} />
           </div>
-          <span className={styles.logoText}>SentimentScope</span>
+          <span className={styles.logoText}>
+            Sentiment<span>Scope</span>
+          </span>
         </Link>
 
         <div className={styles.links}>
           <Link to="/" className={`${styles.link} ${pathname === '/' ? styles.active : ''}`}>
-            <Search size={15} />
+            <Search size={14} />
             <span>Search</span>
           </Link>
           <Link to="/history" className={`${styles.link} ${pathname === '/history' ? styles.active : ''}`}>
-            <History size={15} />
+            <History size={14} />
             <span>History</span>
           </Link>
         </div>
 
         <div className={styles.badge}>
           <span className={styles.dot} />
-          Live Analysis
+          Live
         </div>
       </div>
     </nav>
